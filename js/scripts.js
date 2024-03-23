@@ -30,9 +30,9 @@
         }, Math.abs(window.pageYOffset - $(heading).offset().top) / 1);
 
         // Hide the menu once clicked if mobile
-        if ($('header').hasClass('active')) {
-            $('header, body').removeClass('active');
-        }
+        //if ($('header').hasClass('active')) {
+          //  $('header, body').removeClass('active');
+        //}
     });
 
     // Scroll to top
@@ -62,9 +62,9 @@
         });
 
         // Add icons to each block
-        $this.find('.vtimeline-point').each(function() {
-            $(this).prepend('<div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div>');
-        });
+        //$this.find('.vtimeline-point').each(function() {
+          //  $(this).prepend('<div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div>');
+        //});
 
         // Add dates to the timeline if exists
         $this.find('.vtimeline-content').each(function() {
