@@ -450,6 +450,55 @@ footer {
 .education-block ul {
     padding: 0 0 0 15px;
 }
+#accomplishments {
+    padding: 50px 15px;
+    border-bottom: 1px solid #dcd9d9;
+    text-align: center;
+    background: #fff;
+}
+#accomplishments h2 {
+    color: #374054;
+    margin-bottom: 50px;
+}
+.accomplishment {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 4px;
+}
+.accomplishment-image {
+    float: left;
+}
+.accomplishment-info {
+    /* position: absolute; */
+    top: 50%;
+    /* transform: translateY(-50%); */
+    margin-left: 250px;
+    padding: 15px;
+    
+}
+.accomplishment-info h3 {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #374054;
+    margin: 0 0 15px 0;
+}
+.accomplishment-info p {
+    color: #74808a;
+    margin: 0 0 15px 0;
+    font-size: 0.9em;
+}
+.no-image .accomplishment-info {
+    position: relative;
+    margin: 0;
+    padding: 30px 15px;
+    transform: none;
+}
+#more-projects {
+    display: none;
+}
 #projects {
     padding: 50px 15px;
     border-bottom: 1px solid #dcd9d9;
@@ -460,43 +509,48 @@ footer {
     margin-bottom: 50px;
 }
 .project {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto 30px auto;
-    overflow: hidden;
     background: #fff;
-    border-radius: 4px;
-}
-.project-image {
-    float: left;
-}
-.project-info {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center content */
     padding: 15px;
 }
-.project-info h3 {
-    font-size: 1.5em;
-    font-weight: 300;
-    color: #374054;
-    margin: 0 0 15px 0;
+
+.project-image img {
+    /* width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0; /* Rounded corners for the image */
+    margin-bottom: 15px;
+     */
 }
+
+.project-info h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
 .project-info p {
     color: #74808a;
     margin: 0 0 15px 0;
     font-size: 0.9em;
 }
-.no-image .project-info {
-    position: relative;
-    margin: 0;
-    padding: 30px 15px;
-    transform: none;
+
+.project-info a {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
 }
-#more-projects {
-    display: none;
+
+.project-info a:hover {
+    background: #0056b3;
 }
+
 #skills {
     padding: 50px 15px;
     text-align: center;
@@ -604,6 +658,11 @@ footer {
 .row2 {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
 }
 .ico {
     grid-column: span 1;
@@ -766,10 +825,10 @@ footer {
     .education-block span {
         float: none;
     }
-    .project-image {
+    .accomplishment-image {
         display: none;
     }
-    .project-info {
+    .accomplishment-info {
         position: relative;
         margin: 0;
         padding: 30px 15px;
