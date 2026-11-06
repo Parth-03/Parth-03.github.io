@@ -877,8 +877,8 @@ body.subpage #contact {
 /* Dark theme: change the colors here to adjust the whole site */
 :root {
     color-scheme: dark;
-    --dark-page: #1a1416;
-    --dark-section: #211a1c;
+    --dark-page: #161514;
+    --dark-section: #191612;
     --dark-card: #2c2325;
     --dark-hover: #3a2e31;
     --dark-border: #43383a;
