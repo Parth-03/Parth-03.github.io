@@ -661,8 +661,10 @@ footer {
 }
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: 1fr;
     gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 .ico {
     grid-column: span 1;
@@ -853,4 +855,133 @@ footer {
         font-size: 0.9em;
         padding: 5px 10px;
     }
+}
+
+/* Multi-page layout */
+header a.current {
+    font-weight: 700;
+}
+body.subpage {
+    padding-top: 70px;
+}
+body.subpage header {
+    animation: none;
+}
+#about-Me {
+    padding: 50px 15px;
+}
+body.subpage #contact {
+    min-height: calc(100vh - 70px);
+}
+
+/* Dark theme: change the colors here to adjust the whole site */
+:root {
+    color-scheme: dark;
+    --dark-page: #1a1416;
+    --dark-section: #211a1c;
+    --dark-card: #2c2325;
+    --dark-hover: #3a2e31;
+    --dark-border: #43383a;
+    --dark-heading: #f2ecec;
+    --dark-text: #d3cbcc;
+    --dark-muted: #b0a5a7;
+    --dark-accent: #c9747d;
+    --dark-link: #e8a6ac;
+}
+html,
+body {
+    background: var(--dark-page);
+    color: var(--dark-text);
+}
+.background-alt,
+#accomplishments {
+    background: var(--dark-section);
+}
+#experience,
+#accomplishments,
+#projects {
+    border-bottom-color: var(--dark-border);
+}
+.heading,
+#experience h2,
+#accomplishments h2,
+#projects h2,
+#skills h2 {
+    color: var(--dark-heading);
+}
+.heading:after,
+#experience-timeline:before {
+    background: var(--dark-accent);
+}
+#experience-timeline:after {
+    background: linear-gradient(to bottom, var(--dark-accent), rgba(201, 116, 125, 0));
+}
+
+/* Menu */
+header ul,
+#mobile-menu-open,
+#mobile-menu-close {
+    background: var(--dark-card);
+}
+header a,
+header a:focus,
+#mobile-menu-open,
+#mobile-menu-close {
+    color: var(--dark-text);
+}
+header a:hover {
+    color: var(--dark-heading);
+    background: var(--dark-hover);
+}
+header a.current {
+    color: var(--dark-heading);
+}
+
+/* Cards */
+.vtimeline-content,
+.accomplishment,
+.project {
+    background: var(--dark-card);
+}
+.vtimeline-content {
+    border-color: var(--dark-border);
+}
+.vtimeline-content h3,
+.vtimeline-date,
+.accomplishment-info h3,
+.project-info h3 {
+    color: var(--dark-heading);
+}
+.vtimeline-content h4,
+.vtimeline-content p,
+.accomplishment-info p,
+.project-info p {
+    color: var(--dark-muted);
+}
+.vtimeline-content a,
+.accomplishment-info a {
+    color: var(--dark-link);
+}
+#skills li {
+    color: var(--dark-text);
+    background: var(--dark-card);
+}
+
+/* Footer */
+.top span {
+    border-color: var(--dark-muted);
+}
+.top i {
+    color: var(--dark-muted);
+}
+
+/* Logos and icons: white tiles keep dark artwork visible */
+.ico img,
+.accomplishment-image img {
+    background: #fff;
+    border-radius: 8px;
+    padding: 6px;
+}
+.accomplishment-image {
+    padding: 15px 0 15px 15px;
 }
